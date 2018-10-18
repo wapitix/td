@@ -1,7 +1,8 @@
-test: compile
-	./exo19
-	
-compile: mes_types.h exo19.c
-	gcc -o exo19 exo19.c -Wall
+run: compile
+	./exo11
+	./exo12
 
+compile:exo11.c	exo12.c
 
+	gcc -o exo11 -Wall exo11.c
+	gcc -o exo12 -Wall exo12.c
