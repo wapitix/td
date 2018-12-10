@@ -8,9 +8,9 @@
 
 // A changer éventuellement
 #define TAILLE_CASE 60 // La taille d'une case
-
-#define LARGEUR (9*TAILLE_CASE+1)   // La taille horizontale de la fenêtre
-#define HAUTEUR ((9+1)*TAILLE_CASE) // La taille verticale   de la fenêtre
+#define N 9
+#define LARGEUR (N*TAILLE_CASE+1)   // La taille horizontale de la fenêtre
+#define HAUTEUR ((N+1)*TAILLE_CASE) // La taille verticale   de la fenêtre
 #define TAILLE_POLICE ((2*TAILLE_CASE)/3)
 
 // Les différentes couleurs à changer éventuellement

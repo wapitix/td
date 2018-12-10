@@ -1,4 +1,4 @@
-#include<stdlib.h>
+#include <stdlib.h>
 #include <uvsqgraphics.h>
 #include "constantes.h"
 #include "afficher.h"

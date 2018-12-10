@@ -6,8 +6,32 @@
 
 SUDOKU lire_fichier (char *nom) 
 {
-	fichier = fopen("","r");
-	
+	FILE*F;
+	F = fopen(nom,"r");
+	char car;
+
+	for(int i = 8, j=0; i>=0; i--, j=0)
+	{
+		while(j<9)
+		{
+			fscanf(F,"%c",&car);
+			if(car=='.')
+			{
+				S.valeur_grille[i][j]=0;
+				i++;
+			}
+			else if(car=='*')
+			{
+				S.valeur_grille_modif[i][j]=1;
+				fscanf(f,"%c",&car);
+				S.valeur_grille[i][j]=
+			}
+			else if(car==NULL)
+			{
+				
+			}
+		}
+	}
 	
 	
 	
@@ -19,7 +43,7 @@ SUDOKU lire_fichier (char *nom)
 
 void ecrire_fichier(SUDOKU S) 
 {
-	
+	fprintf(S.valeur_grille[i][j],
 	
 }
 

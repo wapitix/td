@@ -1,17 +1,19 @@
-
+#include "constantes.h"
 #ifndef __SUDOKU_H
 #define __SUDOKU_H
 
-struct valeur_case{
-	int valeur;
-	int modifiable;
-};
-
-
-struct sudoku {
-	struct valeur_case T[9][9];
+struct sudoku
+{
+	int valeur_grille[N][N];
+	int valeur_grille_modif[N][N];
+	
+	
 };
 
 typedef struct sudoku SUDOKU;
+
+SUDOKU initialiser_sudoku();
+SUDOKU sudoku_modifier_case(SUDOKU S, int i, int j);
+
 
 #endif

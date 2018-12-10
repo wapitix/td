@@ -1,5 +1,4 @@
 #include "gestion_sudoku.h"
-
 #ifndef __AFFICHER_H
 #define __AFFICHER_H
 // Fonction a appeler au début poour créer la fenêtre grapĥique
