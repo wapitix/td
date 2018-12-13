@@ -80,4 +80,3 @@ Arbre chg_droite(Arbre a, Arbre ad){
   return a;
 }
 
-
