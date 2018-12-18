@@ -6,7 +6,7 @@
 void initialiser_fenetre_graphique() {
 	init_graphics(LARGEUR,HAUTEUR);
 	affiche_auto_off();
-	fill_screen(COUL_FOND);
+	fill_screen(COUL_FOND); 
 }
 
 void terminer_fenetre_graphique() {
@@ -89,7 +89,6 @@ void lignes_base()
 		g.y=d.y;
 	}
 }
-
 
 void sudoku_afficher(SUDOKU S) {
 	lignes_base();
