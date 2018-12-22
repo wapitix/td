@@ -90,11 +90,41 @@ void lignes_base()
 	}
 }
 
+
+
+void afficher_valeurs(SUDOKU S)
+{
+	POINT P;
+
+	for(int i=0;i<9;i++)
+	{
+		for(int j=0;j<9;j++)
+		{
+			P.x=(TAILLE_CASE)/4 + TAILLE_CASE*i;
+			P.y=(TAILLE_CASE) + TAILLE_CASE*j;
+			
+			
+			
+			if((S.valeur_grille[i][j] !=0) && (S.valeur_grille_modif[i][j]==1))
+			{
+				aff_int(S.valeur_grille[i][j], TAILLE_POLICE, P, COUL_VAL_TRAVAIL);
+			}
+			if((S.valeur_grille[i][j]!=0) && (S.valeur_grille_modif[i][j]==0))
+			{
+				aff_int(S.valeur_grille[i][j], TAILLE_POLICE, P, COUL_VAL_DEPART);
+			}
+		}
+	}
+	
+}
+
+
 void sudoku_afficher(SUDOKU S) {
 	lignes_base();
 	lignes_larges_verticales();
 	lignes_larges_horizontales();
-	
+	afficher_valeurs(S);
+	affiche_all();
 }
 
 

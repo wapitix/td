@@ -8,5 +8,19 @@ void initialiser_fenetre_graphique();
 void terminer_fenetre_graphique();
 
 // Fonction qui affiche l'état courant du sudoku
+void afficher_valeurs(SUDOKU S);
+void lignes_larges_horizontales();
+void lignes_larges_verticales();
+void lignes_base();
 void sudoku_afficher(SUDOKU S);
+
+
+
+
+
+
+
+
+
+
 #endif
