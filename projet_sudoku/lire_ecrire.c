@@ -8,7 +8,7 @@
 SUDOKU lire_fichier (char *nom) 
 {	
 	SUDOKU S;
-	FILE *F;
+	FILE *F; //Lis le fichier
 	F=fopen(nom,"r");
 	char thomas ;
 	int i ,j;
@@ -23,21 +23,26 @@ SUDOKU lire_fichier (char *nom)
 		{
 			fscanf(F,"%c",&thomas);
 
-			if(thomas == '.')
+	/*si c est un point la valeur de la case prend 0(invisible)*/
+			if(thomas == '.') 
 			{
 				S.valeur_grille_modif[i][j]=1;
 				S.valeur_grille[i][j]=0;
 				i++;
 			}
-
-			else if(thomas =='*')
+	/*pointe sur les valeurs du texte que l'on ne peut pas modifier et 
+	qui changent de couleur */
+			else if(thomas =='*') 
 			{
 				S.valeur_grille_modif[i][j]=0;
-				fscanf(F,"%c",&thomas);
+				fscanf(F,"%c",&thomas); 
+	/*autre fscanf pour prendre la valeur qui est a droite 
+	de l'etoile pour la mettre dans la case non modifiable*/
 				 S.valeur_grille[i][j]=atoi(&thomas);
 				i++;
 			}
 
+	/*si ya rien ba on met rien*/
 			else if (thomas =='\n')
 			{
 				
@@ -57,77 +62,9 @@ return S;
 }
 
 
+/*où on met la sauvegarde*/
 void ecrire_fichier(SUDOKU S) 
 {	
 	
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//ca c est le code de base sans le truc de wissam 
-/*SUDOKU lire_fichier (char *nom) {
-	SUDOKU S;
-	char caractere;
-	int i=8; //axe y 
-	int j=0; //axe x
-	FILE *F;
-	F= fopen(nom, "r");
-	while(i>=0)
-	{
-		while(j<9)
-		{
-			fscanf(F,"%c",&caractere);
-			switch(caractere)
-			{
-				case
-					S.T[i][j].valeur=0;
-					j++;
-					break;
-				case
-					S.T[i][j].modifiable=0;
-					break;
-				default :
-					S.T[i][j].valeur= atoi(&caractere);
-					break;
-			}
-		}
-	}
-	return S;
-}
-
-void ecrire_fichier(SUDOKU S) {
-}
-*/

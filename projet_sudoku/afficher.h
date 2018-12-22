@@ -14,13 +14,4 @@ void lignes_larges_verticales();
 void lignes_base();
 void sudoku_afficher(SUDOKU S);
 
-
-
-
-
-
-
-
-
-
 #endif

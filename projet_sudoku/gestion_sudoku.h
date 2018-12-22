@@ -13,7 +13,8 @@ struct sudoku
 typedef struct sudoku SUDOKU;
 
 SUDOKU initialiser_sudoku();
-SUDOKU sudoku_modifier_case(SUDOKU S, int i, int j);
 SUDOKU jouer(SUDOKU S);
+SUDOKU sudoku_modifier_case(SUDOKU S, int i, int j);
+
 
 #endif

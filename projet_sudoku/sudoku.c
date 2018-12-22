@@ -12,6 +12,8 @@ SUDOKU jouer(SUDOKU S)
 	
 	if(P.y<HAUTEUR-TAILLE_CASE)
 	{
+		/*les int colonne et ligne permettent de touvre la case en 
+		abcisse et ordonee du point P que l on a cliqué*/
 		int ligne= P.x/TAILLE_CASE; 
 		int colonne= P.y/TAILLE_CASE; 
 		S = sudoku_modifier_case(S,ligne,colonne);
@@ -22,6 +24,7 @@ return S;
 
 int main (int argc, char *argv[]) 
 {
+	//main du prof
 	SUDOKU S;
 	S = lire_fichier(argv[1]);
 	initialiser_fenetre_graphique();

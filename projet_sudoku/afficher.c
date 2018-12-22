@@ -100,10 +100,13 @@ void afficher_valeurs(SUDOKU S)
 	{
 		for(int j=0;j<9;j++)
 		{
+			/*coordonees du point du aff_int pour placer les valeurs*/
 			P.x=(TAILLE_CASE)/4 + TAILLE_CASE*i;
 			P.y=(TAILLE_CASE) + TAILLE_CASE*j;
-			
-			
+			/*on met /4 et rien pour celui du dessous car le point 
+			correspond pas au milieu du texte mais a un point en haut 
+			a gauche, la comme ca les valeurs sont bien alignees.
+			Alors que si on met /2 et /2 ca decale et ca bug*/
 			
 			if((S.valeur_grille[i][j] !=0) && (S.valeur_grille_modif[i][j]==1))
 			{
@@ -118,11 +121,12 @@ void afficher_valeurs(SUDOKU S)
 	
 }
 
-
 void sudoku_afficher(SUDOKU S) {
+	fill_screen(COUL_FOND);
 	lignes_base();
 	lignes_larges_verticales();
 	lignes_larges_horizontales();
+	
 	afficher_valeurs(S);
 	affiche_all();
 }
