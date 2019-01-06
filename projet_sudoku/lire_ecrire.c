@@ -8,10 +8,10 @@
 SUDOKU lire_fichier (char *nom) 
 {	
 	SUDOKU S;
-	FILE *F; //Lis le fichier
+	FILE* F; 
 	F=fopen(nom,"r");
 	char thomas ;
-	int i ,j;
+	int i,j;
 
 	j=N-1;
 
@@ -23,26 +23,23 @@ SUDOKU lire_fichier (char *nom)
 		{
 			fscanf(F,"%c",&thomas);
 
-	/*si c est un point la valeur de la case prend 0(invisible)*/
+
 			if(thomas == '.') 
 			{
 				S.valeur_grille_modif[i][j]=1;
 				S.valeur_grille[i][j]=0;
 				i++;
 			}
-	/*pointe sur les valeurs du texte que l'on ne peut pas modifier et 
-	qui changent de couleur */
+	
 			else if(thomas =='*') 
 			{
 				S.valeur_grille_modif[i][j]=0;
 				fscanf(F,"%c",&thomas); 
-	/*autre fscanf pour prendre la valeur qui est a droite 
-	de l'etoile pour la mettre dans la case non modifiable*/
-				 S.valeur_grille[i][j]=atoi(&thomas);
+	
+				S.valeur_grille[i][j]=atoi(&thomas);
 				i++;
 			}
-
-	/*si ya rien ba on met rien*/
+			
 			else if (thomas =='\n')
 			{
 				

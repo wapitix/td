@@ -7,11 +7,12 @@
 // et tout s'affiche en proportion
 
 // A changer éventuellement
-#define TAILLE_CASE 60 // La taille d'une case
+#define TAILLE_CASE (60) // La taille d'une case
 #define N 9
 #define LARGEUR (N*TAILLE_CASE+1)   // La taille horizontale de la fenêtre
 #define HAUTEUR ((N+1)*TAILLE_CASE) // La taille verticale   de la fenêtre
 #define TAILLE_POLICE ((2*TAILLE_CASE)/3)
+#define TAILLE_GAGNE (TAILLE_CASE*2) 
 
 // Les différentes couleurs à changer éventuellement
 #define COUL_TITRE mediumslateblue  // Couleur du titre
@@ -20,5 +21,5 @@
 #define COUL_TRAIT noir             // Couleur des traits de séparation
 #define COUL_VAL_DEPART darkred     // Couleur de la police des valeurs de départ
 #define COUL_VAL_TRAVAIL orange     // Couleur de la police des valeurs de travail
-
+#define COUL_GAGNE black
 #endif

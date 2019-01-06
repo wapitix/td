@@ -121,6 +121,39 @@ void afficher_valeurs(SUDOKU S)
 	
 }
 
+void afficher_gagne(SUDOKU S)
+{
+	POINT m;
+	m.x=LARGEUR/2;
+	m.y=HAUTEUR/2;
+	
+	
+	int i,j;
+
+	j=N-1;
+
+	while (j>=0)
+	{
+		i=0;
+
+		while (i<N)
+		{
+			if(S.valeur_grille[i][j]!=0 && S.valeur_grille_modif[i][j]!=0)
+			{
+				aff_pol_centre("GAGNE",TAILLE_GAGNE, m, COUL_GAGNE);
+				i++;
+			}                               
+		}
+		j--;
+	}
+}
+
+
+
+
+
+
+
 void sudoku_afficher(SUDOKU S) {
 	fill_screen(COUL_FOND);
 	lignes_base();
@@ -128,7 +161,10 @@ void sudoku_afficher(SUDOKU S) {
 	lignes_larges_horizontales();
 	
 	afficher_valeurs(S);
+
+	afficher_gagne(S);
 	affiche_all();
+	
 }
 
 

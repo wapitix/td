@@ -32,13 +32,12 @@ clean:
 
 # Pour faire un zip
 # Mettre son nom à la place de SUDOKU
-LENOM=NOM_Prenoms
 zip:
-	rm -rf ${LENOM}
-	rm -rf ${LENOM}.zip
-	mkdir ${LENOM}
-	cp Makefile ${LENOM}
-	cp *.h *.c ${LENOM}
-	cp A_LIRE.txt ${LENOM}
-	zip -r ${LENOM}.zip ${LENOM}
-	rm -rf ${LENOM}
+	rm -rf ${PITTIS_Thomas}
+	rm -rf ${PITTIS_Thomas}.zip
+	mkdir ${PITTIS_Thomas}
+	cp Makefile ${PITTIS_Thomas}
+	cp *.h *.c ${PITTIS_Thomas}
+	cp A_LIRE.txt ${PITTIS_Thomas}
+	zip -r ${PITTIS_Thomas}.zip ${PITTIS_Thomas}
+	rm -rf ${PITTIS_Thomas}
